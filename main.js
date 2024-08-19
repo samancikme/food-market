@@ -9,6 +9,7 @@ import loading from './src/components/Loading.js'
 
 const url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood"
 
+localStorage.setItem("basket" , JSON.stringify([]))
 
 
 
@@ -158,7 +159,7 @@ function loadBasketProducts(meals) {
 
 function counter(){
     const count = document.querySelector(".count")
-    count.textContent = JSON.parse(localStorage.getItem("basket")).length || "0"
+    count.textContent = JSON.parse(localStorage.getItem("basket")).length 
 }
 counter()
 
