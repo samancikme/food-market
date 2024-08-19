@@ -158,7 +158,7 @@ function loadBasketProducts(meals) {
 
 function counter(){
     const count = document.querySelector(".count")
-    count.textContent = JSON.parse(localStorage.getItem("basket")).length
+    count.textContent = JSON.parse(localStorage.getItem("basket")).length || 0
 }
 counter()
 
